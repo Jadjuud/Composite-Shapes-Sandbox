@@ -22,6 +22,8 @@ faceDiameter = displayHeight; //smallest dimension
 eyeDiameter = displayWidth*1/8;
 leftEyeX = displayWidth*1/4;
 leftEyeY = displayHeight*1/4;
+rightEyeX = displayWidth*3/4;
+rightEyeY = leftEyeY;
 //
 //Canvas
 rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
