@@ -36,6 +36,5 @@ rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
 ellipse(faceX, faceY, faceDiameter, faceDiameter);
 ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
 ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
-//ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
-//triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
 //line(mouthX1, mouthY1, mouthX2, mouthY2);
