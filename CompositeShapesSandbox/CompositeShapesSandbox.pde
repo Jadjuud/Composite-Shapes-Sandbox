@@ -125,4 +125,13 @@ ellipse(measleX, measleY, measleDiameter, measleDiameter);
 ellipse(measleX, measleY, measleDiameter, measleDiameter);
 ellipse(measleX, measleY, measleDiameter, measleDiameter);
 ellipse(measleX, measleY, measleDiameter, measleDiameter);
+<<<<<<< HEAD
+=======
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+ellipse(measleX, measleY, measleDiameter, measleDiameter);
+>>>>>>> 0fdfbc30f93d6dd3fcf5cb27e24d75f89f75e437
 fill(resetColour);
