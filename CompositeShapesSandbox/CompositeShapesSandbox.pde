@@ -51,7 +51,8 @@ void draw() {
   measleDiameter = random(width*1/30, width*1/10);
   //
   //Canvas
-  
+  //rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
@@ -62,8 +63,3 @@ void draw() {
   ellipse(measleX, measleY, measleDiameter, measleDiameter);
   fill(resetColour);
 }//End draw()
-//
-void add() {
-  rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
-    ellipse(faceX, faceY, faceDiameter, faceDiameter);
-}
