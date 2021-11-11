@@ -49,9 +49,13 @@ void draw() {
   //textSize(32);
   //text(displayHeight, 10, 30);
   //
-  measleX = random(displayWidth);
-  //measleX = random(displayWidth,displayWidth); //2736 random min and max
-  measleY = random(displayHeight); //1824
+ // measleX = random(displayWidth);
+  //measleX = random(displayWidth,displayWidth); 
+ // measleY = random(displayHeight);
+  
+  measlesX = random(rectFaceX, rectFaceX+rectFaceWidth);
+  measlesY = random(rectFaceY, rectFaceY+rectFaceHeight);
+  
   measleDiameter = random(width*1/30, width*1/10);
   //
   //Canvas
@@ -60,6 +64,8 @@ void draw() {
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
   reset = reset+1;
   }
+  
+  
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
@@ -67,6 +73,16 @@ void draw() {
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
   fill (measlesColour);
+  if (measleX > rectX && measleX < (rectX+faceDiameter)){
   ellipse(measleX, measleY, measleDiameter, measleDiameter);
+  }
   fill(resetColour);
+  
+  //rect(0, 0, rectX, displayHeight);
+  //rect(rectX+faceDiameter, 0, rectX, displayHeight);
+  //arc(100, 100 );
+  //float x = (float)Math.PI;
+  //arc(100, faceDiameter/3, 75, 50, 0, x);
+  
+  
 }//End draw()
