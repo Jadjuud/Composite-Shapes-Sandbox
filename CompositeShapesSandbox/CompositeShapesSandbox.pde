@@ -17,6 +17,7 @@ void setup() {
   fullScreen();
   //
   //Population
+  
   rectX = displayWidth*1/2 - displayHeight*1/2;
   rectY = displayHeight * 0;
   rectdisplayWidth = displayHeight;
@@ -46,20 +47,33 @@ void setup() {
 //
 void draw() {
   //Populationn that changes
-  measleX = random(displayWidth);
-  measleY = random(displayHeight);
+  
+  textSize(32);
+  text(displayHeight, 10, 30);
+  
+  
+  //measleX = random(displayWidth);
+  measleX = random(displayWidth/4,displayWidth/1.5); //2736 random min and mazxx 
+  measleY = random(displayHeight); //1824
   measleDiameter = random(width*1/30, width*1/10);
   //
   //Canvas
   //rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
+  if(reset ==1){
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  
+  reset = reset + 1;
+  }
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
+  
   fill (measlesColour);
   ellipse(measleX, measleY, measleDiameter, measleDiameter);
   fill(resetColour);
+  
+  //fill (100, 100, 30);
 }//End draw()
