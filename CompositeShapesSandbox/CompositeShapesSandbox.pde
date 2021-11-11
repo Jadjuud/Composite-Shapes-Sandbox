@@ -51,8 +51,6 @@ void draw() {
   //
   measleX = random(displayWidth);
   measleY = random(displayHeight);
-  
-  
   measleDiameter = random(width*1/30, width*1/10);
   //
   //Canvas
@@ -60,9 +58,8 @@ void draw() {
   if(reset ==1){
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
   reset = reset+1;
-  }
-  
-  
+  }  
+  //
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
@@ -70,18 +67,20 @@ void draw() {
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
   fill (measlesColour);
-  
+  //
   //do not display the circle if it is outside the rectangle
   if (measleX > rectX && measleX < (rectX+faceDiameter)){
     ellipse(measleX, measleY, measleDiameter, measleDiameter);
   }
   fill(resetColour);
-  
+  //
   //rect(0, 0, rectX, displayHeight);
   //rect(rectX+faceDiameter, 0, rectX, displayHeight);
   //arc(100, 100 );
   //float x = (float)Math.PI;
-  //arc(100, faceDiameter/3, 75, 50, 0, x);
-  
-  
+  //arc(100, faceDiameter/3, 75, 50, 0, x); 
 }//End draw()
+
+//measlesDiameter = random(height*1/20, height*1/10);
+//measlesX = random(rectFaceX+measlesDiameter, rectFaceX+rectFaceWidth-measlesDiameter);
+//measlesY = random(height*0+measlesDiameter, height-measlesDiameter);
