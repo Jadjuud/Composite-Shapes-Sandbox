@@ -46,11 +46,11 @@ void setup() {
 void draw() {
   //Populationn that changes
   //
-  textSize(32);
-  text(displayHeight, 10, 30);
+  //textSize(32);
+  //text(displayHeight, 10, 30);
   //
-  //measleX = random(displayWidth);
-  measleX = random(displayWidth/4,displayWidth/1.5); //2736 random min and max
+  measleX = random(displayWidth);
+  //measleX = random(displayWidth,displayWidth); //2736 random min and max
   measleY = random(displayHeight); //1824
   measleDiameter = random(width*1/30, width*1/10);
   //
