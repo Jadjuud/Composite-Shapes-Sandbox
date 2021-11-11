@@ -11,6 +11,8 @@ float mouthThick, reset;
 float measleX, measleY, measleDiameter;
 color measlesColour=#FF1717, resetColour=#FFFFFF;
 //
+int distCircle;
+
 void setup() {
   //Geometry
   fullScreen();
@@ -41,6 +43,7 @@ void setup() {
   mouthThick = 30;
   reset = 1;
   //
+  
 }//End setup()
 //
 void draw() {
@@ -49,9 +52,12 @@ void draw() {
   //textSize(32);
   //text(displayHeight, 10, 30);
   //
-  measleX = random(displayWidth);
+  ////measleX = random(displayWidth);
+  measleX = random(rectX, rectX+faceDiameter);
   measleY = random(displayHeight);
   measleDiameter = random(width*1/30, width*1/10);
+ 
+ 
   //
   //Canvas
   //rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
@@ -69,18 +75,21 @@ void draw() {
   fill (measlesColour);
   //
   //do not display the circle if it is outside the rectangle
-  if (measleX > rectX && measleX < (rectX+faceDiameter)){
+  
+  
+ /// if (measleX > rectX && measleX < (rectX+faceDiameter)){
+    ////ellipse(measleX, measleY, measleDiameter, measleDiameter);
+    ////arc(measleX, measleY,measleDiameter,measleDiameter, 0, (float)Math.PI*2);
+ //// }
+   
+ //// ellipse(measleX, measleY, measleDiameter, measleDiameter);
+//// }
+ distCircle = (int)Math.sqrt(((faceX-measleX)*(faceX-measleX)) + ((faceY-measleY)*(faceY-measleY)));
+ //// distCircle = (int)Math.sqrt(((measleX-rectX)*(measleX-rectX)) + (measleY*measleY));
+ if (distCircle + measleDiameter/2 <= faceDiameter/2){
     ellipse(measleX, measleY, measleDiameter, measleDiameter);
   }
   fill(resetColour);
   //
-  //rect(0, 0, rectX, displayHeight);
-  //rect(rectX+faceDiameter, 0, rectX, displayHeight);
-  //arc(100, 100 );
-  //float x = (float)Math.PI;
   //arc(100, faceDiameter/3, 75, 50, 0, x); 
 }//End draw()
-
-//measlesDiameter = random(height*1/20, height*1/10);
-//measlesX = random(rectFaceX+measlesDiameter, rectFaceX+rectFaceWidth-measlesDiameter);
-//measlesY = random(height*0+measlesDiameter, height-measlesDiameter);
