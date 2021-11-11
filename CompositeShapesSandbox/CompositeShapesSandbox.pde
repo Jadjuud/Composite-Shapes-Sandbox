@@ -10,14 +10,12 @@ float mouthX1, mouthY1, mouthX2, mouthY2;
 float mouthThick, reset;
 float measleX, measleY, measleDiameter;
 color measlesColour=#FF1717, resetColour=#FFFFFF;
-
 //
 void setup() {
   //Geometry
   fullScreen();
   //
   //Population
-  
   rectX = displayWidth*1/2 - displayHeight*1/2;
   rectY = displayHeight * 0;
   rectdisplayWidth = displayHeight;
@@ -47,13 +45,12 @@ void setup() {
 //
 void draw() {
   //Populationn that changes
-  
+  //
   textSize(32);
   text(displayHeight, 10, 30);
-  
-  
+  //
   //measleX = random(displayWidth);
-  measleX = random(displayWidth/4,displayWidth/1.5); //2736 random min and mazxx 
+  measleX = random(displayWidth/4,displayWidth/1.5); //2736 random min and max
   measleY = random(displayHeight); //1824
   measleDiameter = random(width*1/30, width*1/10);
   //
@@ -61,8 +58,7 @@ void draw() {
   //rect(rectX, rectY, rectdisplayWidth, rectdisplayHeight);
   if(reset ==1){
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
-  
-  reset = reset + 1;
+  reset = reset+1;
   }
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
@@ -70,10 +66,7 @@ void draw() {
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
-  
   fill (measlesColour);
   ellipse(measleX, measleY, measleDiameter, measleDiameter);
   fill(resetColour);
-  
-  //fill (100, 100, 30);
 }//End draw()
