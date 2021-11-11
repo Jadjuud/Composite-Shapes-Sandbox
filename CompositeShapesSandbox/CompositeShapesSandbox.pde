@@ -49,12 +49,9 @@ void draw() {
   //textSize(32);
   //text(displayHeight, 10, 30);
   //
- // measleX = random(displayWidth);
-  //measleX = random(displayWidth,displayWidth); 
- // measleY = random(displayHeight);
+  measleX = random(displayWidth);
+  measleY = random(displayHeight);
   
-  measlesX = random(rectFaceX, rectFaceX+rectFaceWidth);
-  measlesY = random(rectFaceY, rectFaceY+rectFaceHeight);
   
   measleDiameter = random(width*1/30, width*1/10);
   //
@@ -73,8 +70,10 @@ void draw() {
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset);
   fill (measlesColour);
+  
+  //do not display the circle if it is outside the rectangle
   if (measleX > rectX && measleX < (rectX+faceDiameter)){
-  ellipse(measleX, measleY, measleDiameter, measleDiameter);
+    ellipse(measleX, measleY, measleDiameter, measleDiameter);
   }
   fill(resetColour);
   
