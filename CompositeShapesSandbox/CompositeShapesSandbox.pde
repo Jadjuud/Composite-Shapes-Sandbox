@@ -61,7 +61,7 @@ void draw() {
   if(reset ==1){
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
   
-  //Change the reset value so this block of code executes only once
+  //Change the reset value so this block of code executes only once to draw the face only one time
   reset = reset+1;
   }  
   //
